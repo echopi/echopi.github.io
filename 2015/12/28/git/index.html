@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="null"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/><meta content="telephone=no" name="format-detection"/><meta name="description"/><title>git 基本技能 | echopi</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"/><link rel="stylesheet" type="text/css" href="/css/pure-min.css"/><link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css"/><link rel="stylesheet" type="text/css" href="/css/style.css"/><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"/><link rel="alternate" type="application/atom+xml" href="/atom.xml"/></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">git 基本技能</h1><a id="logo" href="">echopi</a><p class="description">挖个坑</p></div><div id="nav-menu"><a href="/" class="current"><i class="icon-home"> 首頁</i></a><a href="/archives/"><i class="icon-archive"> 所有文章</i></a><a href="/about/"><i class="icon-about"> 關於</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post post-page"><h1 class="post-title">git 基本技能</h1><div class="post-meta">2015-12-28 | </div><div class="post-content"><h2 id="u5C06_u4EE3_u7801_u5E93_u67D0_u5206_u652F_u9000_u56DE_u5230_u4EE5_u524D_u7684_u67D0_u4E2Acommit_id"><a href="#u5C06_u4EE3_u7801_u5E93_u67D0_u5206_u652F_u9000_u56DE_u5230_u4EE5_u524D_u7684_u67D0_u4E2Acommit_id" class="headerlink" title="将代码库某分支退回到以前的某个commit id"></a>将代码库某分支退回到以前的某个commit id</h2><ul>
+<li>场景：代码库需要回滚到某一个commit</li>
+<li>原理：先将本地分支退回到某个commit，删除远程分支，再重新push本地分支</li>
+</ul>
+<ol>
+<li>本地代码库回滚</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="operator"><span class="keyword">reset</span> <span class="comment">--hard commit-id //回滚到commit-id，讲commit-id之后提交的commit都去除</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">reset</span> <span class="comment">--hard HEAD~3 //将最近3次的提交回滚</span></span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>远程代码库回滚</li>
+</ol>
+<p>操作步骤</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git checkout the_branch</span><br><span class="line">git pull</span><br><span class="line">git branch the_branch_backup <span class="comment">//备份一下这个分支当前的情况</span></span><br><span class="line">git reset --hard the_commit_id <span class="comment">//把the_branch本地回滚到the_commit_id</span></span><br><span class="line">git <span class="keyword">push</span> origin :the_branch <span class="comment">//删除远程 the_branch</span></span><br><span class="line">git <span class="keyword">push</span> origin the_branch <span class="comment">//用回滚后的本地分支重新建立远程分支</span></span><br><span class="line">git <span class="keyword">push</span> origin :the_branch_backup <span class="comment">//如果前面都成功了，删除这个备份分支</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://git-scm.com/book/en/v2" target="_blank" rel="external">参考</a></p>
+<h2 id="u547D_u4EE4"><a href="#u547D_u4EE4" class="headerlink" title="命令"></a>命令</h2><h3 id="u4E0D_u5E38_u7528_u547D_u4EE4"><a href="#u4E0D_u5E38_u7528_u547D_u4EE4" class="headerlink" title="不常用命令"></a>不常用命令</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- where is .git  --&gt;</span></span><br><span class="line">git rev-parse --git-dir</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 查看符号引用指向的引用 --&gt;</span></span><br><span class="line">git symbolic-ref HEAD</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 查看本地仓库中的所有引用 --&gt;</span></span><br><span class="line">git show-ref</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 使用 gitcat-file 查看对象时, 也可以通过指定引用或符号引用查看对象 --&gt;</span></span><br><span class="line">git cat-file -p HEAD</span><br></pre></td></tr></table></figure>
+<h3 id="u5E38_u7528_u64CD_u4F5C"><a href="#u5E38_u7528_u64CD_u4F5C" class="headerlink" title="常用操作"></a>常用操作</h3><p><strong> 修改最后一次提交，最终只是产生一个提交 </strong></p>
+<ul>
+<li>git commit -m ‘comment’</li>
+<li>git add forgotten_file if necessary</li>
+<li>git commit –amend</li>
+</ul>
+<p><strong> 取消已经暂存的文件 </strong></p>
+<ul>
+<li>git status,u see something like Changes to be committed</li>
+<li>git reset HEAD <file>… , files need to unstage</file></li>
+</ul>
+<p><strong> 取消对文件的修改 </strong></p>
+<ul>
+<li>git checkout – <file> , nothing changed in the file</file></li>
+<li>或者使用 git stash 缓存本地更改，使用 git stash pop 来恢复</li>
+</ul>
+<p><strong> 查看当前的远程库 </strong></p>
+<ul>
+<li>git remote -v</li>
+<li>-v is –verbose</li>
+</ul>
+<p><strong> 从远程仓库抓取数据 </strong></p>
+<ul>
+<li>git fetch [remote-name]</li>
+</ul>
+<p><strong> 推送数据到远程仓库 </strong></p>
+<ul>
+<li>git push origin master</li>
+</ul>
+<p><strong> 远程仓库的删除和重命名 </strong></p>
+<ul>
+<li>git remote rename r1 r2</li>
+<li>git remote rm r2</li>
+</ul>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git remote rename pb paul</span><br><span class="line"><span class="variable">$ </span>git remote</span><br><span class="line">origin</span><br><span class="line">paul</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="variable">$ </span>git remote rm paul</span><br><span class="line"><span class="variable">$ </span>git remote</span><br><span class="line">origin</span><br></pre></td></tr></table></figure>
+<p><strong>其他</strong></p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> rebase</span><br></pre></td></tr></table></figure>
+<h3 id="u6807_u7B7E"><a href="#u6807_u7B7E" class="headerlink" title="标签"></a>标签</h3><ul>
+<li><a href="https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE" target="_blank" rel="external">https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE</a></li>
+</ul>
+<h3 id="u81EA_u52A8_u8865_u5168"><a href="#u81EA_u52A8_u8865_u5168" class="headerlink" title="自动补全"></a>自动补全</h3><p>如果你用的是 Bash shell，可以试试看 Git 提供的自动补全脚本。下载 Git 的源代码，进入 contrib/completion 目录，会看到一个 git-completion.bash 文件。将此文件复制到你自己的用户主目录中（译注：按照下面的示例，还应改名加上点：cp git-completion.bash ~/.git-completion.bash），并把下面一行内容添加到你的 .bashrc 文件中：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/<span class="class">.git-completion</span><span class="class">.bash</span></span><br></pre></td></tr></table></figure>
+<h3 id="u8FD0_u884C_u67D0_u4E2A_u5916_u90E8_u547D_u4EE4"><a href="#u8FD0_u884C_u67D0_u4E2A_u5916_u90E8_u547D_u4EE4" class="headerlink" title="运行某个外部命令"></a>运行某个外部命令</h3><p>不过有时候我们希望运行某个外部命令，而非 Git 的子命令，这个好办，只需要在命令前加上 ! 就行。</p>
+</div><div class="tags"></div><div class="post-nav"><a href="/2015/12/28/fq/" class="pre"><i class="icon-previous">如何合理使用网络</i></a><a href="/2015/12/28/daily/" class="next">待整理<i class="icon-next"></i></a></div></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search" class="search-form-input"/><input type="hidden" name="sitesearch" value="http://eudemonia.me"/></form></div><div class="widget"><div class="widget-title">分類</div></div><div class="widget"><div class="widget-title">標籤</div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title">最新文章</div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2015/12/28/npm/">npm 使用笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/28/tool/">something fucking awesome</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/28/shell/">常用 shell</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/28/pf/">mac port forwarding</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/28/fq/">如何合理使用网络</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/28/git/">git 基本技能</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/28/daily/">待整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/28/css/">css sugar</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/28/arguments/">how to use arguments safely in js</a></li></ul></div></div></div></div><div id="footer">© <a href="/" rel="nofollow">echopi.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div><a id="rocket" href="#top" class="show"></a><script src="/js/jquery.min.js" type="text/javascript"></script>
+<script src="/js/totop.js" type="text/javascript"></script><script src="/js/fancybox.pack.js" type="text/javascript"></script>
+<script src="/js/jquery.fancybox.js" type="text/javascript"></script><link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css"></div></body></html>

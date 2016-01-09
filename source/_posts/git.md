@@ -1,8 +1,10 @@
 title: git 基本技能
+date: 2015-12-28
+tags: git
 ---
 
 
-## 将代码库某分支退回到以前的某个commit id
+### 将代码库某分支退回到以前的某个commit id
 
 - 场景：代码库需要回滚到某一个commit
 - 原理：先将本地分支退回到某个commit，删除远程分支，再重新push本地分支

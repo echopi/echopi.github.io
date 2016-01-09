@@ -1,4 +1,6 @@
 title: css sugar
+date: 2015-12-28
+tags: css
 ---
 
 ### [csstriggers][1]
@@ -11,6 +13,7 @@ title: css sugar
 - http://cubic-bezier.com/#.17,.67,.83,.67
 
 
+<!--more-->
 
 
 ```

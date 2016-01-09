@@ -1,4 +1,6 @@
-title: mac port forwarding
+title: port forwarding
+date: 2015-12-28
+tags: shell
 ---
 
 

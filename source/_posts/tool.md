@@ -1,10 +1,18 @@
 title: something fucking awesome
+date: 2015-12-28
+tags: tool
 ---
+## summary
+
+简单介绍一些大大提升效率的工具。
+
+
+<!--more-->
 
 
 ## [oh-my-zsh][4]
 
-> Oh My Zsh is a way of life!
+Oh My Zsh is a way of life!
 
 
 - [终极 Shell -- ZSH][3]

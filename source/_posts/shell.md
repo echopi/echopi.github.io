@@ -1,5 +1,21 @@
 title: 常用 shell 
+date: 2015-12-28
+tags: shell
 ---
+
+计算文本行
+
+```
+<!-- output a numbered list  -->
+cat -n myfile
+<!-- simply count lines -->
+wc -l myfile
+<!-- print a count of the matches with grep -->
+grep whatever myfile | tee /dev/tty | wc -l
+```
+
+
+<!--more-->
 
 ### 端口相关
 

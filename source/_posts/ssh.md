@@ -4,7 +4,7 @@ tags: ssh
 ---
 
 
-### generate keys
+### Generate keys
 
 ```
 ssh-keygen -t rsa -b 4096 -C "your@mail.com"
@@ -16,7 +16,18 @@ cat ~/.ssh/id_rsa.pub
 ```
 
 
-### copy your public key to the clipboard
+### Add your key to the ssh-agent
+
+```
+<!-- Ensure ssh-agent is enabled: -->
+eval "$(ssh-agent -s)"
+<!-- Add your SSH key to the ssh-agent: -->
+ssh-add ~/.ssh/id_rsa
+
+```
+
+
+### Copy your public key to the clipboard
 
 ```
 <!-- window -->
@@ -25,6 +36,18 @@ clip < ~/.ssh/id_rsa.pub
 pbcopy < ~/.ssh/id_rsa.pub
 <!-- Linux (requires xclip): -->
 xclip -sel clip < ~/.ssh/id_rsa.pub
+
+```
+
+
+### Add to your account
+
+
+
+### Test
+
+```
+ssh -T git@github.com
 
 ```
 

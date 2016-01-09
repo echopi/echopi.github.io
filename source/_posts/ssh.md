@@ -27,3 +27,15 @@ pbcopy < ~/.ssh/id_rsa.pub
 xclip -sel clip < ~/.ssh/id_rsa.pub
 
 ```
+
+### 多 ssh 帐号
+
+ssh 提供一种优雅且灵活的方式来解决多帐号的问题，通过用户自定义配置 `~/.ssh/config` 
+
+```
+Host    别名
+    HostName  主机名
+    Port            端口
+    User           用户名
+    IdentityFile  密钥文件的路径
+```

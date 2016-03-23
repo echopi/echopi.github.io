@@ -3,8 +3,7 @@ date: 2016-01-09
 tags: Lantern
 ---
 
-
- 介绍使用网络的两种不同姿势， Lantern & Tor
+ 介绍使用网络的两种不同姿势， Lantern & Tor。 Lantern 主要目的用于突破网络内容封锁，而 Tor 更注重匿名或传输安全性。
 
 
 <!--more-->
@@ -63,8 +62,8 @@ mac 为例
 
 **install Tor**
 
-- [install port][11] : Macports is a package manager for Mac OS X
-- run: sudo port install tor
+- install [Homebrew][13]: The missing package manager for OS X
+- run: brew install tor
 
 
 **配置文件**
@@ -78,6 +77,12 @@ cp torrc.sample torrc
 
 ```
 
+
+Documentation, including links to installation and setup instructions:
+        https://www.torproject.org/docs/documentation.html
+
+Making applications work with Tor:
+        https://wiki.torproject.org/projects/tor/wiki/doc/TorifyHOWTO
 
 
 
@@ -179,4 +184,4 @@ SOCKS5 127.0.0.1:9150
 [10]:https://github.com/getlantern/lantern "lantern github"
 [11]:https://www.macports.org/install.php "port install"
 [12]:https://www.torproject.org/projects/torbrowser.html.en#downloads "torbrowser"
-
+[13]:http://brew.sh/ "Homebrew"

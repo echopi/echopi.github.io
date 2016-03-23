@@ -67,8 +67,11 @@ git cat-file -p HEAD
 - git commit -m 'comment'
 - git add forgotten_file if necessary
 - git commit --amend
+- git checkout -- <filename>
 
+交互式添加文件到暂存区：
 
+git add -i
 
 ** 取消已经暂存的文件 **
 
@@ -149,3 +152,6 @@ source ~/.git-completion.bash
 ### 运行某个外部命令
 
 不过有时候我们希望运行某个外部命令，而非 Git 的子命令，这个好办，只需要在命令前加上 ! 就行。
+
+
+[1]:https://rogerdudler.github.io/git-guide/index.zh.html "git guide"

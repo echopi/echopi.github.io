@@ -37,9 +37,6 @@ tags: css
 
 
 
-
-
-
 [1]: http://csstriggers.com/ "csstriggers"
 [2]:http://www.w3ctech.com/topic/1472 "debug Keyframe"
 

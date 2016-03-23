@@ -62,3 +62,6 @@ Host    别名
     User           用户名
     IdentityFile  密钥文件的路径
 ```
+
+
+[1]:http://ahei.info/ssh-copy-id.htm "ssh的免认证登录" 

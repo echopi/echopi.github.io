@@ -50,3 +50,23 @@ pod install
 pod update
 
 ```
+
+### 升级到 `EI Capitan` 10.11.x 遇到 `Operation not permitted`
+
+
+This is happening because Apple has enabled rootless on the new install.
+
+解决：
+
+ ```
+sudo gem install -n /usr/local/bin cocoapods  -v 0.35
+
+or 
+
+sudo nvram boot-args="rootless=0"; sudo reboot  
+sudo gem install -n /usr/local/bin cocoapods  -v 0.35
+
+```
+
+
+[1]:http://blog.csdn.net/IROYCN/article/details/49510571 "This is happening because Apple has enabled rootless on the new install."

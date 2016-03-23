@@ -4,7 +4,7 @@ tags: tool
 ---
 ## summary
 
-简单介绍一些大大提升效率的工具。
+一些提升效率的工具。
 
 
 <!--more-->
@@ -33,7 +33,6 @@ upgrade_oh_my_zsh
 
 <!-- uninstall  -->
 uninstall_oh_my_zsh
-
 
 ```
 

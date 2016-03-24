@@ -19,6 +19,16 @@ tags: 坑
 在需要对旋屏作适配的场景，针对 Android 设备，可以加一个延时处理
 
 
+### iOS click event don’t bubble to body
+
+参考 jQuery 文档
+
+On mobile iOS (iPhone, iPad and iPod Touch) the click event does not bubble to the document body for most elements and cannot be used with .live() without applying one of the following workarounds:
+
+1. Use natively clickable elements such as a or button, as both of these do bubble todocument.
+2. Use .on() or .delegate() attached to an element below the level of document.body, since mobile iOS does bubble within the body.
+3. Apply the CSS style cursor:pointer to the element that needs to bubble clicks (or a parent including document.documentElement). Note however, this will disable copy\paste on the element and cause it to be highlighted when touched.
+
 
 ### scroll
 

@@ -39,35 +39,36 @@
 
     // This is the unique name for the cache controlled by this version of the worker.
     get CACHE_NAME() {
-      return this.CACHE_PREFIX + 'e9068a1b0b3f8602549e862aaecdc8c842f8df18';
+      return this.CACHE_PREFIX + 'e0f88ebc11c3c6c68b6347314212150e6dd7585a';
     },
 
     // This is a list of resources that will be cached.
     RESOURCES: [
-      './2015/12/28/css/index.html', // 5d68c8eab8125d2d330b1779c2bcf65ff81e4b32
-      './2015/12/28/git/index.html', // 004255098fb8ba3250f24a75439f6ff0a4dcd822
-      './2015/12/28/js-args/index.html', // f4c749f9b2c243210d5ad5207cba19de836cfa2e
-      './2015/12/28/npm/index.html', // 826a6f4133ce7fa5f39183f90c84d4d5be9969a0
-      './2015/12/28/pf/index.html', // 427f9fea29298b0632051e5032a25958281ba93c
-      './2015/12/28/shell/index.html', // bd4c04766b71971866c0bd782cf2d42138c347bb
-      './2015/12/28/tool/index.html', // c85defed635defadf06eeb2339effd860301b4ed
-      './2016/01/09/cocoapods/index.html', // bcfff6914ffbb78e7f128cb264a987298fa89eaa
-      './2016/01/09/fq/index.html', // 72ed88a4df24ec52d1be38f6e31892b84ae326f4
-      './2016/01/09/ssh/index.html', // 7abb9dc1b2c91595004115b75d6ab6bd64af4626
-      './2016/01/09/thin-mac/index.html', // a3c067ca2424a2361d09115e1a813334c623487c
-      './2016/02/22/rbenv/index.html', // ec43da0db2c43b7984ed1a5a5308d2a70913f28c
-      './2016/02/23/launchctl/index.html', // 970e3d331987080a80923f24877f15381ead9d26
-      './2016/03/23/bug/index.html', // 8eb83820725535e7e510ac95711cc3c0041c73aa
-      './2016/03/23/musicbox/index.html', // 47e8b0983d54a8737a3285de208d5d93d44c16cf
-      './about/index.html', // 243ea42b0fec760252215f667309860b86413397
-      './archives/2015/12/index.html', // 8b6d857f65bf6844386925b9455e50c76a80874a
-      './archives/2015/index.html', // 8b6d857f65bf6844386925b9455e50c76a80874a
-      './archives/2016/01/index.html', // a64dd087f75fda5dc097a924a4f372f8f41c445c
-      './archives/2016/02/index.html', // 20ab45a919c052f4f69a72b03eab4f3d8c66e37e
-      './archives/2016/03/index.html', // c7b5fc15a411751a5bfe07beff88fd09f8a53e29
-      './archives/2016/index.html', // 8d76ce80696240fa9269a405757c5a04d0bdad92
-      './archives/index.html', // 7dfd99c766303f8940593076cd7bc0b2ddb7d99c
-      './archives/page/2/index.html', // e6a07b3251b0161ff935c7f0a43f1e758f26e66a
+      './2015/12/28/css/index.html', // c8c354beae6f436384415ff9f1bf26e6585c5314
+      './2015/12/28/git/index.html', // 1e5ab7098934b4550091c384b9b1a14c18db63cd
+      './2015/12/28/js-args/index.html', // 8f3354fae9ddb6b452e72b3a70dadad47136ade0
+      './2015/12/28/npm/index.html', // da20e0db9e488cafc3bf5adb30e1f147d1aa4a3c
+      './2015/12/28/pf/index.html', // 582cb7aa7d2888f688a427c8c3aa3f61f4ac276c
+      './2015/12/28/shell/index.html', // cdc6aacd9ca9f81b9fa6c5a9e5cfb8e6029a28eb
+      './2015/12/28/tool/index.html', // ed3cfb0beb9c2671af796d69d7dec5d7ec23ef6f
+      './2016/01/09/cocoapods/index.html', // 07c2be22f459ec4e0e0900ba066e4b74fc293dd7
+      './2016/01/09/fq/index.html', // c7a87a1e084f734744e73ce34e374f14ee3664ed
+      './2016/01/09/ssh/index.html', // 80d33c7ef178f48efd9115c5175d38389c5790de
+      './2016/01/09/thin-mac/index.html', // 88eb966f58a75e358bcefcabdd002ccade03b8e5
+      './2016/02/22/rbenv/index.html', // 098e59c3da133dd694b6d11a82b267ce6fa648e7
+      './2016/02/23/launchctl/index.html', // bdbcad2c30c428f6b43bedb43a8e42b0166da1ce
+      './2016/03/23/bug/index.html', // 18b45f9c69b85de4fd420f6705c7b26cf768166b
+      './2016/03/23/musicbox/index.html', // f94dde711479892c4fe86cd71b1cb67ce167d15f
+      './about/index.html', // ad27c1c8a1bf5bfbff7ac249310bb79e7848fb47
+      './archives/2015/12/index.html', // 110a02e02f8f0a481e90a1210fe7f00c38b0c4ae
+      './archives/2015/index.html', // 110a02e02f8f0a481e90a1210fe7f00c38b0c4ae
+      './archives/2016/01/index.html', // f69553f56d9ead130bbf62cdf7d821932723d9af
+      './archives/2016/02/index.html', // 658ab84e26d72745542362717106bf0815890eba
+      './archives/2016/03/index.html', // f3d72ef0887244b093d35ad09af629e659b1c700
+      './archives/2016/index.html', // 98c4b434b2ea113bcd43fad33cf5b7f85c2392bf
+      './archives/index.html', // fc4b7c348769ced2da718edc235593292395cae8
+      './archives/page/2/index.html', // 1ced99038279cb2e2860e634eb206aecd965e992
+      './browserconfig.xml', // 27feeade966f930e0d1f4123f561c8b89c70f1a0
       './CNAME', // 9700936a278d2eb505fa49c247db88bcecabb638
       './css/grids-responsive-min.css', // 703826508193cbe21f2745d3e837256e224eb512
       './css/jquery.fancybox.css', // 3e5850dfd0ac87fe34a5c680d50f300536542bae
@@ -99,40 +100,38 @@
       './img/apple-touch-icon-76x76.png', // 9d80edf3d7948a6007f9bfb93edec1ae9fcf6991
       './img/apple-touch-icon-precomposed.png', // 156952b708c3902534f41a607cce7a381fdb3e5d
       './img/apple-touch-icon.png', // 084b6d2c47544192800f708a92f78fed946c41fc
-      './img/browserconfig.xml', // 8dfe7747b598b79f4613c06b9875b3bc85f9b35c
       './img/favicon-16x16.png', // 54467420cc1aa88101ac357665b1e51cd9ed24e6
       './img/favicon-32x32.png', // 28c4a14fea054949e829d36b29d8c0629d41874b
       './img/favicon-96x96.png', // 9d7769f59f535147427724a9db6e6b2ef9ce5d65
       './img/favicon.ico', // 8b4de12f004f4bf1be26244f30aa6662ea15c153
-      './img/manifest.json', // 3991f1e1383955c34c14cf0ed4794163e36969b7
       './img/mstile-144x144.png', // 3954e8d5670436118b08f88939ca81b7a810811e
       './img/mstile-150x150.png', // 37a5c6e63806fcf8a3697ebc14a5ee6615413b54
       './img/mstile-310x150.png', // 302c81b3a535fd9f370006c5bd79bacda6dd5562
       './img/mstile-310x310.png', // 28fd6392ee8127147785de2c4e8f9d3ac2313f5e
       './img/mstile-70x70.png', // 8abc8295f6936a04adcbe9c1d990df5996d5f27a
       './img/safari-pinned-tab.svg', // 6adec484bff4145b7ef698b041e87fa63123a9d6
-      './index.html', // 0a994c8cd0c62e3500a02930e22d6a21ce24d5db
+      './index.html', // dd4297b419ebb4574ecbdbb94b85b188e8b9fa63
       './js/fancybox.pack.js', // 53360764b429c212f424399384417ccc233bb3be
       './js/jquery.fancybox.js', // 92be822124e716a947bae3d676867e702933a93c
       './js/jquery.min.js', // 41b4bfbaa96be6d1440db6e78004ade1c134e276
       './js/offline-manager.js', // e2e09e000c5b64035940ae44e9c0936eb25ecd51
       './js/totop.js', // 7dbf8fcf582a4fb6eb9b2c60d6de9f9c2091ec4c
-      './manifest.json', // 270bf02ff503f94ea3be22dfee960bd6ccb1e5c6
-      './page/2/index.html', // 9fce0836d9db27fe2dd3f5468d909367b9bde55d
-      './tags/arguments/index.html', // f9bde4f9579d873406c3bbdf57f37b6fbba3d6f8
-      './tags/css/index.html', // 4cc2c3d4e7db0e08f79254266b1ee637775ab0ab
-      './tags/git/index.html', // 78582301dfbb4698bc961589c56fc2837cc3525a
-      './tags/iOS/index.html', // db6acc3c7488696b31ada9f78d41a17a1fae66f5
-      './tags/Lantern/index.html', // 415eea0ca51e5021a5ad51e55491a4508acd888a
-      './tags/launchctl/index.html', // 3f5d1b06ffb86b4cf22273860536ff942d0886e2
-      './tags/mac/index.html', // 807ea57fe9a9520f5314bab933508aafd2564a12
-      './tags/music/index.html', // 4332c8712aed6ebb47736ff150f70118aac48d8b
-      './tags/npm/index.html', // d4eeed76476d91991f8caf93dc815036ca7f4c81
-      './tags/ruby/index.html', // f3d1ff2be6ade2b1cf96f51b85d8685f64247412
-      './tags/shell/index.html', // 04c3dd92da69b2994164e89523234b892f52a2a4
-      './tags/ssh/index.html', // 5a491a210aa7f4a561cd5d65fa8736f439749b70
-      './tags/tool/index.html', // a179fe5d4eac51d0088871e105bbd6f129c044b5
-      './tags/坑/index.html', // b43333aab512a79d97291de540a7f602f1a0b5ce
+      './manifest.json', // 424f998c36c00d28f3fa8fa68e83f5652b34f3cc
+      './page/2/index.html', // 2e180135986ae0c064a733860bbb33310131dcbe
+      './tags/arguments/index.html', // c9c71088d803049372ee11fbae0b3d422c4d72d6
+      './tags/css/index.html', // 9423c94fd0b4d6ad74f5736d546b27272c988b01
+      './tags/git/index.html', // f915b793a057bcba3aa1c42551411a545af7dba5
+      './tags/iOS/index.html', // 09295fdd9a328d1b6e0a761198d93127cc9793bb
+      './tags/Lantern/index.html', // fc211b2ae9963efba7820d4f14facb08224b9ee2
+      './tags/launchctl/index.html', // 3125d33cc0cfc89b94f2f069a9572d535b6d634c
+      './tags/mac/index.html', // 4b0ea14dcdb63f26bc0ce17e552ca8000ca8e327
+      './tags/music/index.html', // 443a10d6c34a0317f5d08059a4f52c663a8afc07
+      './tags/npm/index.html', // 0b192c029723e0882a168eb26c7c1c8f3c1cf6c1
+      './tags/ruby/index.html', // def44a8ec1491f2228638cb2cdeb7b2281331195
+      './tags/shell/index.html', // 0845c3e6e3a017b5eeff0fca1cb5e3e350101874
+      './tags/ssh/index.html', // f29ff5cf2bbd327ce8932d7e2db55aaf4f641e99
+      './tags/tool/index.html', // 6577d321ce5ebf6bb291af628885055e37302eba
+      './tags/坑/index.html', // 7ca533d509a349417fb7c0bdc4dad16bf0b62b63
 
     ],
 

@@ -39,7 +39,7 @@
 
     // This is the unique name for the cache controlled by this version of the worker.
     get CACHE_NAME() {
-      return this.CACHE_PREFIX + 'a08d56d1a8dd01fd80da7b2c8ae73dc0b8f5c36d';
+      return this.CACHE_PREFIX + 'e13c1218f113efc3ac54aec09475719673b67d51';
     },
 
     // This is a list of resources that will be cached.
@@ -52,7 +52,7 @@
       './2015/12/28/shell/index.html', // 98a9ceeb8f0e99e595b4fdf9c56c1d9e329e552c
       './2015/12/28/tool/index.html', // 329ed9e8e751b0c1974d9beb99f408c6bd5fdfb7
       './2016/01/09/cocoapods/index.html', // 68c318c401bc6f604981d30bc74f395575db5f36
-      './2016/01/09/fq/index.html', // eff92b5ba7bd9e3e6fad595a4812ce86e7fc2ee3
+      './2016/01/09/fq/index.html', // 99a47955a4a92009fdb8f72a60b6fab74433b6db
       './2016/01/09/ssh/index.html', // e95fa289ea1e9510ecbc00008dfbe13ed63f44a8
       './2016/01/09/thin-mac/index.html', // d7b2dc7f8071c7db31edac78f7472d7233373c91
       './2016/02/22/rbenv/index.html', // 09569c4cb6b77c8c057b90506ef42ec8ed92284d

@@ -56,7 +56,7 @@ Tor 是 The Onion Router 的缩写，中文又称“洋葱网络/洋葱路由”
 **两种使用方式**
 
 
-####1. Tor in a command line
+#### 1. Tor in a command line
 
 mac 为例
 
@@ -86,7 +86,7 @@ Making applications work with Tor:
 
 
 
-####2. Simply use [Tor Browser Bundle][12]
+#### 2. Simply use [Tor Browser Bundle][12]
 
 这个软件包捆绑了 Firefox 浏览器（对于2.3.25之后的版本，监听端口改为9150，其他的9050）
 
@@ -94,24 +94,24 @@ Making applications work with Tor:
 
 step 1:
 
-![img](http://7xpby6.com1.z0.glb.clouddn.com/step1.png)
+![img](//7xpby6.com1.z0.glb.clouddn.com/step1.png)
 
 step 2:
 
-![img](http://7xpby6.com1.z0.glb.clouddn.com/step2.png)
+![img](//7xpby6.com1.z0.glb.clouddn.com/step2.png)
 
 step 3:
 
-![img](http://7xpby6.com1.z0.glb.clouddn.com/step3.png)
+![img](//7xpby6.com1.z0.glb.clouddn.com/step3.png)
 
 step 4:
 
-![img](http://7xpby6.com1.z0.glb.clouddn.com/step4.png)
+![img](//7xpby6.com1.z0.glb.clouddn.com/step4.png)
 
 
 step 5:
 
-![img](http://7xpby6.com1.z0.glb.clouddn.com/step5.png)
+![img](//7xpby6.com1.z0.glb.clouddn.com/step5.png)
 
 
 
@@ -167,11 +167,6 @@ SOCKS5 127.0.0.1:9150
 
 
 ### 参考
-
-
-
-
-
 [1]:https://getlantern.org/ "Lantern download"
 [2]:https://github.com/FelisCatus/SwitchyOmega "SwitchyOmega"
 [3]:https://program-think.blogspot.com/2014/10/gfw-tor-meek.html "Tor + Meek"

@@ -5,17 +5,20 @@
 # Site
 title: echopi
 subtitle: ultimate freedem
-description:
+description: epi's Github Page
 author: jiewei.ljw
-language:
-timezone:
+language: zh_CN
+timezone: +0008
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://eudemonia.me
+url: https://eudemonia.com   # with the https protocol
+enforce_ssl: eudemonia.com   # without any protocol
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+
+
 
 # Directory
 source_dir: source
